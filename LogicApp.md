@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This demo shows how to programmatically move data immediately to archive tier when it's ingested into a storage account. The video is [Not Yet Available](https://youtu.be/H_IaqNDJ11c)
+This demo shows how to programmatically move data immediately to archive tier when it's ingested into a storage account. The video is [here](https://youtu.be/uku7HN4zaDc)
 
 ## Storage Account
 
