@@ -5,6 +5,17 @@
 ## Introduction
 
 This demo shows how to programmatically move data to a different tier based on a prefix using an HTTP call (REST). The video is [not ready yet](https://youtu.be/uku7HN4zaDc)
+
+### App Settings:
+storageAccountSASKey
+storageAccountBaseUri
+
+### Parameters
+string targetTier - hot, cool, archive (default hot)
+string objectPrefix
+string containerName
+
+## Code
 ```csharp
 using System;
 using System.IO;
@@ -37,11 +48,11 @@ namespace BlobRecall
                 .Build();
             var storageAccountSASKey = config["storageAccountSASKey"];
             var storageAccountBaseUri = config["storageAccountBaseUri"];
-            var containerName = config["containerName"];
 
             //get the parameters from the query for tier and prefix
             string targetTier = req.Query["targetTier"];
             string objectPrefix = req.Query["objectPrefix"];
+            string containerName = req.Query["containerName"];
 
             //set up the storage account for use
             StorageCredentials credentials = new StorageCredentials(storageAccountSASKey);

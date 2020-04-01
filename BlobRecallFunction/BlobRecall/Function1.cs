@@ -29,11 +29,11 @@ namespace BlobRecall
                 .Build();
             var storageAccountSASKey = config["storageAccountSASKey"];
             var storageAccountBaseUri = config["storageAccountBaseUri"];
-            var containerName = config["containerName"];
 
             //get the parameters from the query for tier and prefix
             string targetTier = req.Query["targetTier"];
             string objectPrefix = req.Query["objectPrefix"];
+            string containerName = req.Query["containerName"];
 
             //set up the storage account for use
             StorageCredentials credentials = new StorageCredentials(storageAccountSASKey);
